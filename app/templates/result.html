@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Flask Summarizer - Result</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav_container">
+            <h1 class="logo">Mind Map Generator</h1>
+        </div>
+    </header>
+    <div class="container_result">
+        <img src="{{ url_for('static', filename='images/result_image.png') }}" alt="Summarization Result">
+
+        <p><a href="/">Go back to the home page</a></p>
+    </div>
+</body>
+
+</html>

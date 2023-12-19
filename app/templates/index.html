@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Flask Summarizer</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav_container">
+            <h1 class="logo">Mind Map Generator</h1>
+        </div>
+
+    </header>
+    <div class="container">
+        <form method="post" action="/" enctype="multipart/form-data>
+            <label for=" option">Choose an option (and give your input based on your option selection):</label>
+            <select id="option" name="option" required>
+                <option value="1">Enter Text</option>
+                <option value="2">Upload File</option>
+                <option value="3">Enter Website Link</option>
+            </select>
+
+            <div id="text-input" class="option-input">
+                <label for="input_text">Enter Text:</label>
+                <textarea id="input_text" name="input_text"
+                    placeholder="Enter the text here only if you have selected 'Enter Text' in the dropdown"></textarea>
+            </div>
+
+            <div id="file-input" class="option-input">
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file" accept=".txt">
+            </div>
+
+            <div id=" link-input" class="option-input">
+                <label for="website_link">Enter Website Link:</label>
+                <input type="text" id="website_link" name="website_link"
+                    placeholder="https://example.com (Enter the link only if you have selected 'Enter Website Link' in the dropdown)">
+            </div>
+
+            <button type="submit">Generate Mind Map</button>
+        </form>
+
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
