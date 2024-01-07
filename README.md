@@ -7,3 +7,5 @@ We have also developed a web application using Flask to improve the user interac
 <br>
 The webpage where the mind map is displayed is as follows:
 ![Screenshot 2024-01-07 at 19-24-16 Flask Summarizer - Result](https://github.com/NotManigandan/Mind-Map-Generator/assets/72668299/6abf4401-23db-4022-8c88-beb6ea34af30)
+<br>
+Latest Commit: Updated README
